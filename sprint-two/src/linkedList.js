@@ -15,6 +15,8 @@ var LinkedList = function() {
   return list;
 };
 
+// Create Node
+
 var Node = function(value) {
   var node = {};
 
