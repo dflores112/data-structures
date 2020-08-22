@@ -1,11 +1,15 @@
-
+// Pseudoclassical Instantiation Pattern -- Declare a class Graph and follow by Graph.prototype
 
 // Instantiate a new graph
 var Graph = function() {
+  this.list = {};
 };
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
+  if (!this.list[node]) {
+    this.list[node] = [];
+  }
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.

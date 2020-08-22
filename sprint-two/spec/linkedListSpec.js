@@ -24,10 +24,10 @@ describe('linkedList', function() {
   });
 
   it('should remove the head from the list when removeHead is called', function() {
-    linkedList.addToTail(4);
-    linkedList.addToTail(5);
+    linkedList.addToTail(4); // [head] => [4] => [tail]
+    linkedList.addToTail(5); // [head] => [4] => [5] => [tail]
     expect(linkedList.head.value).to.equal(4);
-    linkedList.removeHead();
+    linkedList.removeHead(); // [head] => [5] => [tail] [].length => 2 -- => 1
     expect(linkedList.head.value).to.equal(5);
   });
 
